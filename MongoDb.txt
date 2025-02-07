@@ -1,0 +1,4 @@
+Write  ->   mongodb://localhost:27017
+
+
+in shell Mongosh
