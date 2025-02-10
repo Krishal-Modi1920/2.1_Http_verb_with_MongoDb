@@ -1,7 +1,7 @@
 ********************************************************************************************************************************************************************
 **) Spring-Boot
 - Spring Boot is a framework for building applications in the java programming language.
-- However, spring Boot takes this convenience to the next level by focusing specifically on reducing the eeffort required to setup and configure a spring application.
+- However, spring Boot takes this convenience to the next level by focusing specifically on reducing the effort required to setup and configure a spring application.
 
 Advantages
 - Auto Configuration
@@ -35,8 +35,9 @@ Jar can be given to anyone for running the code
 
 ********************************************************************************************************************************************************************
 **) Structure of Spring Boot Folders
+
 - .idea = intellij related files all the things related to Intellij (tools, etc)
-- mvn = maven wrapper for acccessing maven things inside the project 
+- mvnw = maven wrapper for acccessing maven things inside the project 
 - gitignore = here we can write which files we want ignore in the entire project folder
 - src -> main 
   application.properties = configurations like with mongoDb and soon
@@ -55,15 +56,17 @@ Jar can be given to anyone for running the code
 	mvn clean - to clean
 	mvn package - to make them again
 ********************************************************************************************************************************************************************
+
 - Now we will get the objects from the IOC container instead of making them by ourselves.
 - IOC will scan the @Component for keeping it inside the container means all to take to object 
-- object = bean, now after Writing @Component on class the class can remain inside IOC container
+- object = bean, now after Writing @Component on class the class can remain inside IOC container and can use all its dpenedencies.
 
 *) @SpringBootApplication
    consist of @Configuration, @EnableAutoConfiguration, @ComponentScan
 	- @Configuration – This tells Spring that the class contains bean definitions (i.e., methods that create objects managed by Spring).
 	- @EnableAutoConfiguration – This allows Spring Boot to automatically configure beans based on the dependencies you have in your project.
 	- @ComponentScan – This tells Spring to look for components (like @Component, @Service, @Repository, etc.) in the specified package and register them in the 		  Spring container (IoC container).
+
 
 ********************************************************************************************************************************************************************
 
@@ -213,3 +216,29 @@ JPA is used in Relational Database not in Mongo Db
 *) There are two different way to interact with a database
 Query Method Dsl is a simple and convenint way to create queries based on method naming conventions, while the 
 Criteria API offers a more dynamic and programmatic approach for building complex and custom queries
+
+
+********************************************************************************************************************************************************************
+
+
+***) Http Status Code are grouped into five categories based on their first digit
+
+*) 1xx (Informational)
+
+- These status codes indicate that the request was received and understood, and the server is continuing  to process it. These are typically used for information purpose and rarely seen in practice.
+
+*) 2xx (Successful)
+
+- These status codes indicate that the request was successfully received, understood and processed by the server.
+
+*) 3xx (Redirection)
+
+- These status codes indicate that further action is needed to complete the request. They are used when the client needs to take additional steps to access the requested resources.
+
+*) 4xx (Client Error)
+
+- These status codes indicate that there was an error on the clients part such as a malformed request or authentication issue.
+
+*) 5xx (Server Error)
+
+- These status codes that there was an error on the server's part while trying to fulfill the request.
